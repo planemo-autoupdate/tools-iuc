@@ -2,6 +2,9 @@
     <description>
         Mass screening of contigs for antimicrobial and virulence genes
     </description>
+    <xrefs>
+        <xref type='bio.tools'>ABRicate</xref>
+    </xrefs>
     <edam_topics>
         <edam_topic>topic_0622</edam_topic>
         <edam_topic>topic_3301</edam_topic>
