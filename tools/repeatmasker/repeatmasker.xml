@@ -1,6 +1,8 @@
 <tool id="repeatmasker_wrapper" name="RepeatMasker" version="4.1.1" profile="17.01">
   <description>screen DNA sequences for interspersed repeats and low complexity regions</description>
-
+  <xrefs>
+      <xref type="bio.tools">RepeatMasker</xref>
+  </xrefs>
   <requirements>
     <requirement type="package" version="4.1.1">repeatmasker</requirement>
   </requirements>
