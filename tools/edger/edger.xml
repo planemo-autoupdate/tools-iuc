@@ -1,4 +1,7 @@
 <tool id="edger" name="edgeR" version="3.24.1+galaxy1">
+    <xrefs>
+        <xref type='bio.tools'>edger</xref>
+    </xrefs>
     <description>
         Perform differential expression of count data
     </description>
