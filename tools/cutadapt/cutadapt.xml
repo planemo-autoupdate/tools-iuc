@@ -1,5 +1,8 @@
 <tool id="cutadapt" name="Cutadapt" version="1.16.8" profile="17.09">
     <description>Remove adapter sequences from Fastq/Fasta</description>
+    <xrefs>
+        <xref type='bio.tools'>cutadapt</xref>
+    </xrefs>
     <macros>
         <import>macros.xml</import>
     </macros>
