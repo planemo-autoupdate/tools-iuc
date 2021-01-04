@@ -1,5 +1,8 @@
 <tool id="deseq2" name="DESeq2" version="2.11.40.6+galaxy1">
     <description>Determines differentially expressed features from count tables</description>
+    <xrefs>
+        <xref type='bio.tools'>deseq2</xref>
+    </xrefs>
     <macros>
         <import>deseq2_macros.xml</import>
     </macros>
