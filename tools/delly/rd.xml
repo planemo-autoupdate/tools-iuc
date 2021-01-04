@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <tool id="delly_rd" name="Delly read-depth (rd)" version="@TOOL_VERSION@+galaxy@VERSION_SUFFIX@" profile="18.01">
     <description>normalization on read-depth profiles</description>
+    <expand macro="bio_tools"/>
     <macros>
         <import>macros.xml</import>
     </macros>
