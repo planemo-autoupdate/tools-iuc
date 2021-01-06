@@ -1,10 +1,13 @@
 <tool id="mykrobe_genotype" name="mkyrobe genotype" version="0.7.0" >
-  <description>Antibiotic resistance predictions</description>
-  <macros>
-    <import>macro.xml</import>
-  </macros>
-  <expand macro="requirements"/>
-  <command detect_errors="exit_code">
+    <description>Antibiotic resistance predictions</description>
+    <xrefs>
+        <xref type='bio.tools'>Mykrobe</xref>
+    </xrefs>
+    <macros>
+        <import>macro.xml</import>
+    </macros>
+    <expand macro="requirements"/>
+    <command detect_errors="exit_code">
 <![CDATA[
         @select_inputs@
 
