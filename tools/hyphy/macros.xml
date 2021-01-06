@@ -4,6 +4,11 @@
         <param name="input_file" type="data" format="fasta" label="Input FASTA file"/>
         <param name="input_nhx" type="data" format="nhx" label="Input newick file"/>
     </xml>
+    <xml name="bio_tools">
+        <xrefs>
+            <xref type='bio.tools'>HyPhy</xref>
+        </xrefs>
+    </xml>
     <xml name="substitution">
         <param name="model" type="select" label="Substitution model">
             <option value="GTR">GTR - General time reversible

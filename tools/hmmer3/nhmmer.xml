@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <tool id="hmmer_nhmmer" name="nhmmer" version="@TOOL_VERSION@">
-  <description>search a DNA model or alignment against a DNA database (BLASTN-like)</description>
-  <macros>
-    <import>macros.xml</import>
-  </macros>
-  <expand macro="requirements"/>
-  <expand macro="stdio"/>
-  <command><![CDATA[
+    <description>search a DNA model or alignment against a DNA database (BLASTN-like)</description>
+    <expand macro="bio_tools"/>
+    <macros>
+        <import>macros.xml</import>
+    </macros>
+    <expand macro="requirements"/>
+    <expand macro="stdio"/>
+    <command><![CDATA[
 nhmmer
 
 @OFORMAT_WITH_OPTS@

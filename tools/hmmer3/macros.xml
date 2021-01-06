@@ -1,22 +1,27 @@
 <?xml version="1.0"?>
 <macros>
-  <xml name="requirements">
-    <requirements>
-      <requirement type="package" version="@TOOL_VERSION@">hmmer</requirement>
-      <yield/>
-    </requirements>
-  </xml>
-  <token name="@TOOL_VERSION@">3.3</token>
-  <xml name="stdio">
-    <stdio>
-      <!-- Anything other than zero is an error -->
-      <exit_code range="1:"/>
-      <exit_code range=":-1"/>
-      <!-- In case the return code has not been set propery check stderr too -->
-      <regex match="Error:"/>
-      <regex match="Exception:"/>
-    </stdio>
-  </xml>
+    <xml name="requirements">
+        <requirements>
+            <requirement type="package" version="@TOOL_VERSION@">hmmer</requirement>
+            <yield/>
+        </requirements>
+    </xml>
+    <xml name="bio_tools">
+        <xrefs>
+            <xref type='bio.tools'>gemini</xref>
+        </xrefs>
+    </xml>
+    <token name="@TOOL_VERSION@">3.3</token>
+    <xml name="stdio">
+        <stdio>
+            <!-- Anything other than zero is an error -->
+            <exit_code range="1:"/>
+            <exit_code range=":-1"/>
+            <!-- In case the return code has not been set propery check stderr too -->
+            <regex match="Error:"/>
+            <regex match="Exception:"/>
+        </stdio>
+    </xml>
   <token name="@THRESHOLDS@">
 -E $E
 --domE $domE

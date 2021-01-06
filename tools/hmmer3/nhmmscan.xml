@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <tool id="hmmer_nhmmscan" name="nhmmscan" version="@TOOL_VERSION@">
-  <description>search DNA sequence(s) against a DNA profile database</description>
-  <macros>
-    <import>macros.xml</import>
-  </macros>
-  <expand macro="requirements"/>
-  <expand macro="stdio"/>
-  <command><![CDATA[
+    <description>search DNA sequence(s) against a DNA profile database</description>
+    <expand macro="bio_tools"/>
+    <macros>
+        <import>macros.xml</import>
+    </macros>
+    <expand macro="requirements"/>
+    <expand macro="stdio"/>
+    <command><![CDATA[
 @INPUTHMMCHOICE@
 nhmmscan
 

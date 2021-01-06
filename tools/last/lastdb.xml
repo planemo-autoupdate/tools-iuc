@@ -1,7 +1,6 @@
 <tool id="last_db" name="LASTdb" version="@LAST_CONDA_VERSION@+galaxy1" profile="18.01">
-
     <description>prepares sequences for subsequent comparison and alignment using lastal.</description>
-
+    <expand macro="bio_tools"/>
     <macros>
         <import>macros_last.xml</import>
     </macros>
