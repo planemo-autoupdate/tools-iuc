@@ -1,12 +1,12 @@
 <tool id="obi_ngsfilter" name="NGSfilter" version="@TOOL_VERSION@">
     <description>Assigns sequence records to the corresponding experiment/sample based on DNA tags and primers</description>
+    <expand macro="bio_tools"/>
     <macros>
         <import>macros.xml</import>
     </macros>
     <expand macro="requirements"/>
     <expand macro="stdio"/>
     <command>
-
         <![CDATA[
 
         ngsfilter

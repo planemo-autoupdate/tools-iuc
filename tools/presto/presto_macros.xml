@@ -5,7 +5,11 @@
             <yield />
         </citations>
     </xml>
-    
+    <xml name="bio_tools">
+        <xrefs>
+            <xref type='bio.tools'>presto</xref>
+        </xrefs>
+    </xml>
     <xml name="requirements">
         <requirements>
               <requirement type="package" version="0.5.4">presto</requirement>
