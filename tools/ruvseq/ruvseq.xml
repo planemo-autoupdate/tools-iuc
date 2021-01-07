@@ -1,5 +1,8 @@
 <tool id="ruvseq" name="Remove Unwanted Variation" version="1.16.0">
     <description>from RNA-seq data</description>
+    <xrefs>
+        <xref type='bio.tools'>ruvseq</xref>
+    </xrefs>
     <requirements>
         <requirement type="package" version="1.16.0">bioconductor-ruvseq</requirement>
         <requirement type="package" version="1.22.1">bioconductor-deseq2</requirement>
