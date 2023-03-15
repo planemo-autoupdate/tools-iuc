@@ -1,12 +1,11 @@
-<tool id="rseqc_deletion_profile" name="Deletion Profile" version="@TOOL_VERSION@+galaxy@VERSION_SUFFIX@" profile="@GALAXY_VERSION@">
+<tool id="rseqc_deletion_profile" name="Deletion Profile" version="@TOOL_VERSION@">
     <description>
      calculates the distributions of deleted nucleotides across reads
     </description>
+    <expand macro="bio_tools"/>
     <macros>
         <import>rseqc_macros.xml</import>
     </macros>
-
-    <expand macro="bio_tools"/>
 
     <expand macro="requirements" />
 
@@ -15,8 +14,7 @@
     <version_command><![CDATA[deletion_profile.py --version]]></version_command>
 
     <command><![CDATA[
-        @BAM_SAM_INPUTS@
-        deletion_profile.py -i 'input.${extension}' -o output -l ${read_align_length} -n ${read_num} -q ${mapq}
+        deletion_profile.py -i '${input}' -o output -l ${readlength} -n ${readnum} -q ${mapq}
         ]]>
     </command>
 
@@ -37,10 +35,10 @@
     <tests>
         <test>
             <param name="input" value="pairend_strandspecific_51mer_hg19_chr1_1-100000.bam" />
-            <param name="read_align_length" value="101" />
+            <param name="readlength" value="101" />
             <param name="rscript_output" value="true" />
             <output name="outputpdf" file="output.deletion_profile.pdf" compare="sim_size" />
-            <output name="outputxls" file="output.deletion_profile.txt" ftype="tabular"/>
+            <output name="outputxls" file="output.deletion_profile.txt" />
             <output name="outputr" file="output.deletion_profile_r" />
         </test>
     </tests>

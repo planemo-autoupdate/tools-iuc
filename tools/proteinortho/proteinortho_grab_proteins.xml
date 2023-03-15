@@ -18,9 +18,11 @@
         proteinortho_grab_proteins.pl 
             --tofiles
             #if $regex:
-                '$regex'
+                $regex
             #end if
-            $source
+            #if $source:
+                $source
+            #end if
             #if $query.querytype == "string":
                 '$query.querystring'
             #else:
@@ -39,7 +41,6 @@
             </param>
             <when value="string">
                 <param name="querystring" type="text" label="A string of the protein/gene name/identifier that you want to search">
-                    <validator type="regex" negate="true" message="Identifier must not end with a backslash">.*\\$</validator>
                     <sanitizer invalid_char="">
                         <valid initial="string.letters,string.digits">
                             <add value="!"/>

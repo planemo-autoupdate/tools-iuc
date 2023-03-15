@@ -22,11 +22,8 @@
     sed -i.bak 's|/tmp/prout|'`pwd`'/hacked_database|' './hacked_database/trained_species/fly/info.json' &&
 #end if
 
-mkdir -p input/ &&
-ln -s '${input}' input/input.fasta &&
-
 funannotate predict
---input input/input.fasta
+--input '${input}'
 --out output
 #if $uglyTestingHack == "true":
     --database `pwd`'/hacked_database'

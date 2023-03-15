@@ -13,7 +13,6 @@
     <xml name="bio_tools">
         <xrefs>
             <xref type="bio.tools">scater</xref>
-            <xref type="bioconductor">scater</xref>
         </xrefs>
     </xml>
     <xml name="citations">

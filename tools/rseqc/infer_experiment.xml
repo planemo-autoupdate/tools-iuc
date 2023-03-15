@@ -1,10 +1,9 @@
-<tool id="rseqc_infer_experiment" name="Infer Experiment" version="@TOOL_VERSION@+galaxy@VERSION_SUFFIX@" profile="@GALAXY_VERSION@">
+<tool id="rseqc_infer_experiment" name="Infer Experiment" version="@TOOL_VERSION@.1">
     <description>speculates how RNA-seq were configured</description>
+    <expand macro="bio_tools"/>
     <macros>
         <import>rseqc_macros.xml</import>
     </macros>
-
-    <expand macro="bio_tools"/>
 
     <expand macro="requirements" />
 
@@ -13,8 +12,7 @@
     <version_command><![CDATA[infer_experiment.py --version]]></version_command>
 
     <command><![CDATA[
-        @BAM_SAM_INPUTS@
-        infer_experiment.py -i 'input.${extension}' -r '${refgene}'
+        infer_experiment.py -i '${input}' -r '${refgene}'
             --sample-size ${sample_size}
             --mapq ${mapq}
             > '${output}'
@@ -29,7 +27,7 @@
     </inputs>
 
     <outputs>
-        <data format="txt" name="output" label="${tool.name} on ${on_string}: RNA-seq experiment configuration" />
+        <data format="txt" name="output" />
     </outputs>
 
     <tests>

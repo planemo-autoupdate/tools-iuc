@@ -41,11 +41,12 @@ $header
         </test>
         <test>
             <param name="input" value="mergedBed2.bed" ftype="bed" />
-            <param name="strand" value="-s" />
+            <param name="strandedness" value="-s" />
             <output name="output" file="mergedBed_result2.bed" ftype="bed" />
         </test>
         <test>
             <param name="input" value="mergedBed3.bed" ftype="bed" />
+            <param name="report_number" value="-n" />
             <output name="output" file="mergedBed_result3.bed" ftype="bed" />
         </test>
         <test>

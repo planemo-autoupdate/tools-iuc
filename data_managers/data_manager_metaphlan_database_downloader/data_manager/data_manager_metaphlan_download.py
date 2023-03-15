@@ -106,8 +106,7 @@ def download_metaphlan_db(data_tables, index, table_name, target_dp):
             dbkey=index,
             value='%s-%s' % (index, date.today().strftime("%d%m%Y")),
             name="MetaPhlAn clade-specific marker genes (%s)" % index,
-            path=str(db_dp),
-            db_version='SGB' if 'SGB' in index else 'legacy'))
+            path=str(db_dp)))
 
 
 if __name__ == "__main__":
@@ -130,14 +129,14 @@ if __name__ == "__main__":
 
     # Set up data tables dictionary
     data_tables = create_data_tables_dict()
-    add_data_table(data_tables, "metaphlan_database_versioned")
+    add_data_table(data_tables, "metaphlan_database")
 
     # Fetch data from specified data sources
     print("Download and build database")
     download_metaphlan_db(
         data_tables,
         args.index,
-        "metaphlan_database_versioned",
+        "metaphlan_database",
         target_dp)
 
     # Write output JSON

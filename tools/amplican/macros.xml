@@ -4,7 +4,6 @@
     <xml name="bio_tools">
         <xrefs>
             <xref type="bio.tools">amplican</xref>
-            <xref type="bioconductor">amplican</xref>
         </xrefs>
     </xml>
     <xml name="requirements">
